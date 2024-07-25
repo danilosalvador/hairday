@@ -19,9 +19,12 @@ export function scheduleShow({ dailySchedules }) {
 
             time.textContent = dayjs(schedule.when).format("HH:mm")
             name.textContent = schedule.name
+            
             cancelIcon.setAttribute("src", "./src/assets/cancel.svg")
             cancelIcon.setAttribute("alt", "Cancelar")
+            cancelIcon.classList.add("cancel-icon")
 
+            item.dataset.id = schedule.id
             item.append(time, name, cancelIcon)
 
             const hour = dayjs(schedule.when).hour()
