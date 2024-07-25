@@ -6,6 +6,10 @@ const periodNight = document.getElementById("period-night")
 
 export function scheduleShow({ dailySchedules }) {
     try {
+        periodMorning.innerHTML = ""
+        periodAfternoon.innerHTML = ""
+        periodNight.innerHTML = ""
+
         dailySchedules.forEach((schedule) => {
             const item = document.createElement("li")
 

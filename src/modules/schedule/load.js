@@ -7,7 +7,7 @@ const selectedDate = document.getElementById("date")
 export async function schedulesDay() {
     const date = selectedDate.value
 
-    const dailySchedules = await scheduleListByDay(date);
+    const dailySchedules = await scheduleListByDay({ date });
 
     scheduleShow({ dailySchedules })
     hoursLoad({ date, dailySchedules })
