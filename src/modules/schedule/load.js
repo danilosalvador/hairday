@@ -1,11 +1,11 @@
 import { hoursLoad } from "../form/hours-load"
-import { scheduleListByDay } from "../../services/schedule-list-by-day.js"
+import { scheduleShow } from "./show.js"
 
 const selectedDate = document.getElementById("date")
 
 export async function schedulesDay() {
     const date = selectedDate.value
 
-    const dailySchedules = await scheduleListByDay({ date })
+    await scheduleShow({ date })
     hoursLoad({ date })
 }
