@@ -1,14 +1,11 @@
 import dayjs from "dayjs"
-import { scheduleListByDay } from "../../services/schedule-list-by-day.js"
 
 const periodMorning = document.getElementById("period-morning")
 const periodAfternoon = document.getElementById("period-afternoon")
 const periodNight = document.getElementById("period-night")
 
-export async function scheduleShow({ date }) {
+export function scheduleShow({ dailySchedules }) {
     try {
-        const dailySchedules = await scheduleListByDay({ date })
-
         dailySchedules.forEach((schedule) => {
             const item = document.createElement("li")
 
