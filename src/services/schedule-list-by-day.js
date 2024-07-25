@@ -1,5 +1,5 @@
-import dayjs from 'dayjs'
-import { apiConfig } from './api-config.js'
+import dayjs from "dayjs"
+import { apiConfig } from "./api-config.js"
 
 export async function scheduleListByDay({ date }) {
     try {
